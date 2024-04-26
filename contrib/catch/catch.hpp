@@ -7420,7 +7420,7 @@ namespace Catch {
     // 32kb for the alternate stack seems to be sufficient. However, this value
     // is experimentally determined, so that's not guaranteed.
 		#if defined(_SC_SIGSTKSZ_SOURCE) || defined(_GNU_SOURCE)
-			static constexpr stc::size_t sigStackSize = 32768;
+			static constexpr std::size_t sigStackSize = 32768;
 		#else
 	    static constexpr std::size_t sigStackSize = 32768 >= MINSIGSTKSZ ? 32768 : MINSIGSTKSZ;
 		#endif
